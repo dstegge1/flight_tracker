@@ -1,7 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import os
-import requests_cache
 from datetime import datetime, timedelta
 import flight_search
 from flight_search import FlightSearch
