@@ -3,9 +3,9 @@ import os
 
 class NotificationManager:
     def __init__(self):
-        self.from_email = os.getenv("MY_EMAIL")
-        self.to_email = os.getenv("TO_EMAIL")
-        self.password = os.getenv("PASSWORD")
+        self.from_email = os.environ.get("MY_EMAIL")
+        self.to_email = os.environ.get("TO_EMAIL")
+        self.password = os.environ.get("PASSWORD")
     def send_email(self, iata_code, current_price, new_price):
         price_drop = current_price - new_price
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
