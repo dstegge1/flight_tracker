@@ -10,7 +10,7 @@ class NotificationManager:
         price_drop = current_price - new_price
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
-            connection.login(user=os.environ.get("MY_EMAIL"), password=os.environ.get("PASSWORD"))
+            connection.login(user=self.from_email, password=self.password)
             connection.sendmail(from_addr=self.from_email,
                                 to_addrs=self.to_email,
                                 msg=(f"Subject: New Lowest Price for {iata_code}\n\n"
