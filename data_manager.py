@@ -5,8 +5,8 @@ from pprint import pprint
 
 class DataManager:
     def __init__(self):
-        self.username = os.getenv("SHEETY_USERNAME")
-        self.password = os.getenv("SHEETY_PASSWORD")
+        self.username = os.environ.get("SHEETY_USERNAME")
+        self.password = os.environ.get("SHEETY_PASSWORD")
         self.get_endpoint = "https://api.sheety.co/4187912d679c992e84911d466be33df2/flightDeals/prices"
         self.sheety_headers = {
             "Authorization": "Basic bnVsbDpudWxs"
