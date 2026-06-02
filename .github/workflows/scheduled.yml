@@ -43,7 +43,7 @@ jobs:
           # Add more secrets in Settings > Secrets > Actions
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           TO_EMAIL: ${{ secrets.TO_EMAIL }}
-          PASSWORD: ${{ secrets.MY_PASSWORD }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
           SHEETY_PASSWORD: ${{ secrets.SHEETY_PASSWORD }}
           SHEETY_USERNAME: ${{ secrets.SHEETY_USERNAME }}
