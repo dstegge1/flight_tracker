@@ -4,7 +4,7 @@ from pprint import pprint
 
 class FlightSearch:
     def __init__(self):
-        self._api_key = os.getenv('SERP_API_KEY')
+        self._api_key = os.environ.get('SERP_API_KEY')
 
     def check_flights(self, origin_city_code, destination_city_code, from_time, to_time):
         flight_search_endpoint = "https://serpapi.com/search"
